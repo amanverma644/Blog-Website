@@ -49,7 +49,6 @@ app.get("/posts/:postName", function (req, res) {
 
   posts.forEach(function (post) {
     const storeTitle = _.lowerCase(post.title);
-    console.log();
 
     if (storeTitle === requestedTitle) {
       res.render("post", { title: post.title, content: post.content });
